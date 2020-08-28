@@ -789,17 +789,7 @@ header {
   margin: 0 0 5px;
 }
 
-.radio-line .radio-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.radio-line .radio-cont {
+.radio-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -808,12 +798,12 @@ header {
           align-items: center;
 }
 
-.radio-line .costum-radio {
+.radio-cont .costum-radio {
   position: relative;
   margin-left: 7px;
 }
 
-.radio-line .costum-radio input {
+.radio-cont .costum-radio input {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -825,16 +815,16 @@ header {
   cursor: pointer;
 }
 
-.radio-line .costum-radio input:checked ~ .custom-check {
+.radio-cont .costum-radio input:checked ~ .custom-check {
   background-color: #33d3ca;
 }
 
-.radio-line .costum-radio input:checked ~ .custom-check::after {
+.radio-cont .costum-radio input:checked ~ .custom-check::after {
   -webkit-transform: none;
           transform: none;
 }
 
-.radio-line .custom-check {
+.radio-cont .custom-check {
   width: 35px;
   height: 35px;
   display: -webkit-box;
@@ -852,7 +842,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-.radio-line .custom-check::after {
+.radio-cont .custom-check::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: "\f00c";
@@ -863,13 +853,23 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-.radio-line .radio-title {
+.radio-cont .radio-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.radio-cont .radio-title {
   font-size: 12px;
   color: #33d3ca;
   font-weight: 500;
 }
 
-.radio-line .radio-desc {
+.radio-cont .radio-desc {
   font-size: 10px;
   color: #333;
 }
@@ -1051,6 +1051,391 @@ header {
   color: #a2a2a2;
 }
 
+.order-page {
+  padding-top: 25px;
+}
+
+.order-desc-table {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.table-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.table-head .table-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #33d3ca;
+}
+
+.table-head .edit {
+  font-weight: 500;
+  font-size: 14px;
+  color: #33d3ca;
+  border: 2px solid #33d3ca;
+  background-color: #fff;
+  height: 35px;
+  border-radius: 17.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 15px;
+  min-width: 120px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.table-head .edit:hover, .table-head .edit:focus {
+  background-color: #33d3ca;
+  color: #fff;
+}
+
+.order-table {
+  width: 100%;
+  color: #a2a2a2;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.order-table th {
+  font-weight: 500;
+}
+
+.order-table td,
+.order-table th {
+  padding-bottom: 8px;
+}
+
+.order-table .cat-head {
+  color: #333;
+  font-weight: bold;
+}
+
+.order-table .total td {
+  border-top: 1px solid #dbdbdb;
+  padding-top: 10px;
+  color: #33d3ca;
+}
+
+.order-notes {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.order-notes .note-title {
+  font-size: 14px;
+  color: #33d3ca;
+}
+
+.note-area {
+  width: 100%;
+  height: 75px;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  resize: none;
+  font-size: 15px;
+  color: #333;
+  margin-top: 10px;
+  padding: 10px 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.note-area::-webkit-input-placeholder {
+  color: #a2a2a2;
+}
+
+.note-area:-ms-input-placeholder {
+  color: #a2a2a2;
+}
+
+.note-area::-ms-input-placeholder {
+  color: #a2a2a2;
+}
+
+.note-area::placeholder {
+  color: #a2a2a2;
+}
+
+.note-area:focus {
+  border-color: #33d3ca;
+}
+
+.order-desc-time {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.time-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.time-line:last-of-type {
+  margin-top: 15px;
+}
+
+.time-line .line-title {
+  font-size: 14px;
+  color: #33d3ca;
+}
+
+.time-line .line-desc {
+  color: #333;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.time-line .line-desc i {
+  width: 16px;
+  font-size: 14px;
+}
+
+.time-line .line-desc span {
+  direction: ltr;
+}
+
+.order-desc-address {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.order-desc-address .map {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+}
+
+.order-desc-address .adress-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  color: #333;
+}
+
+.order-desc-pay {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.pay-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pay-method:last-of-type {
+  margin-top: 15px;
+}
+
+.order-desc-bill {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.order-desc-bill .table-head {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.bill-summ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bill-totals {
+  margin-right: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.bill-totals .bill-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0 8px;
+  color: #333;
+}
+
+.bill-totals .final-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 0;
+  border-top: 1px solid #dbdbdb;
+  color: #33d3ca;
+}
+
+.bill-totals .total-title {
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bill-totals .total-title span {
+  margin: 0 3px;
+  font-weight: normal;
+  color: #33d3ca;
+}
+
+.bill-totals .total-num {
+  font-size: 16px;
+  font-weight: bold;
+  width: 50px;
+}
+
+.order-desc-coupon {
+  display: none;
+}
+
+.order-desc-coupon .table-head .cancel {
+  font-weight: 500;
+  font-size: 14px;
+  color: #f00;
+  border: 2px solid #f00;
+  background-color: #fff;
+  height: 35px;
+  border-radius: 17.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 15px;
+  min-width: 120px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.order-desc-coupon .table-head .cancel:hover, .order-desc-coupon .table-head .cancel:focus {
+  background-color: #f00;
+  color: #fff;
+}
+
+.done-msg {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 25px 40px;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.msg-img {
+  margin: 0 0 20px;
+}
+
+.msg-title {
+  color: #33d3ca;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.msg-msg {
+  color: #333;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
 .headers-cont {
   position: -webkit-sticky;
   position: sticky;
@@ -1208,7 +1593,7 @@ html[dir='rtl'] .search-form .search-btn {
           flex-direction: column;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  margin: 25px 0;
+  margin: 50px 0 0;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;

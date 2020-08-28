@@ -39,10 +39,17 @@ $(document).ready(function () {
             $(".clicked").removeClass("clicked");
         }, 100);
         var value = $parentElm.find(".qty-input").val();
-        if (value > 1) {
+        if (value >= 1) {
             value--;
         }
         $parentElm.find(".qty-input").val(value);
+    });
+
+    $('.order-desc-bill .edit').click(function () {
+        $('.order-desc-coupon').slideDown(300)
+    });
+    $('.order-desc-bill .cancel').click(function () {
+        $('.order-desc-coupon').slideUp(300)
     });
 
     ////////////meun
@@ -65,8 +72,4 @@ $(document).ready(function () {
             $('.overlay').fadeIn('300');
         }
     }
-
-
-
-
 });
