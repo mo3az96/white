@@ -91,54 +91,15 @@
                     <div class="order-desc-table">
                         <div class="table-head">
                             <h5 class="table-title fixall">الطلب</h5>
-                            <a href="new-order.html" class="edit fixall">
-                                اضافة / تعديل
-                            </a>
                         </div>
-                        <table class="order-table">
-                            <colgroup>
-                                <col style="width: 35%" />
-                                <col style="width: 22%" />
-                                <col style="width: 28%" />
-                                <col style="width: 15%" />
-                            </colgroup>
-                            <tr>
-                                <th>العناصر</th>
-                                <th>العدد</th>
-                                <th>سعر الوحدة</th>
-                                <th>مجموع</th>
-                            </tr>
-                            <tr>
-                                <td class="cat-head">دراي كلين</td>
-                            </tr>
-                            <tr>
-                                <td>ثوب صيفى</td>
-                                <td>1</td>
-                                <td>10</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <td>بدلة قطعتين</td>
-                                <td>2</td>
-                                <td>12</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <td class="cat-head">غسيل وكوى</td>
-                            </tr>
-                            <tr>
-                                <td>شماغ</td>
-                                <td>1</td>
-                                <td>4</td>
-                                <td>4</td>
-                            </tr>
-                            <tr class="total">
-                                <td>المجموع</td>
-                                <td>4</td>
-                                <td></td>
-                                <td>28 ريال</td>
-                            </tr>
-                        </table>
+                        <div class="order-empty">
+                            <div class="cart-img">
+                                <img src="images/cart.jpg">
+                            </div>
+                            <p class="empty-text fixall">
+                                المغسلة ستقوم بإضافة تفاصيل القطع لطلبك
+                            </p>
+                        </div>
                     </div>
                     <div class="order-notes">
                         <h6 class="note-title fixall">ملاحظات</h6>
@@ -194,7 +155,7 @@
                         <textarea class="note-area fixall" placeholder="الوصف"></textarea>
                     </div>
 
-                    <div class="order-desc-pay">
+                    <div class="order-desc-pay cat2-desc-pay">
                         <div class="table-head">
                             <h5 class="table-title fixall">الدفع</h5>
                         </div>
@@ -202,7 +163,7 @@
                             <div class="pay-method">
                                 <div class="radio-cont">
                                     <div class="costum-radio">
-                                        <input type="radio" name="type">
+                                        <input type="radio" name="type" checked>
                                         <span class="custom-check"></span>
                                     </div>
                                     <div class="radio-text">
@@ -240,7 +201,7 @@
                         </div>
                     </div>
 
-                    <div class="order-desc-bill">
+                    <div class="order-desc-bill ">
                         <div class="table-head">
                             <a href="#!" class="edit fixall">
                                 إضافة كوبون
@@ -256,7 +217,7 @@
                                         السعر
                                     </h6>
                                     <span class="total-num">
-                                        23
+                                        0
                                     </span>
                                 </div>
                                 <div class="bill-total">
@@ -264,7 +225,7 @@
                                         رسوم تحصيل
                                     </h6>
                                     <span class="total-num">
-                                        5
+                                        0
                                     </span>
                                 </div>
                                 <div class="bill-total">
@@ -288,70 +249,17 @@
                                         المجموع
                                     </h6>
                                     <span class="total-num">
-                                        28 ريال
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="order-desc-bill order-desc-coupon">
-                        <div class="table-head">
-                            <a href="#!" class="cancel fixall">
-                                إلغاء كوبون
-                            </a>
-                        </div>
-                        <div class="bill-summ">
-                            <div class="bill-img">
-                                <img src="images/bill.jpg" alt="">
-                            </div>
-                            <div class="bill-totals">
-                                <div class="bill-total">
-                                    <h6 class="fixall total-title">
-                                        السعر
-                                    </h6>
-                                    <span class="total-num">
-                                        23
-                                    </span>
-                                </div>
-                                <div class="bill-total">
-                                    <h6 class="fixall total-title">
-                                        رسوم تحصيل
-                                    </h6>
-                                    <span class="total-num">
-                                        5
-                                    </span>
-                                </div>
-                                <div class="bill-total">
-                                    <h6 class="fixall total-title">
-                                        رصيدى
-                                    </h6>
-                                    <span class="total-num">
                                         0
                                     </span>
                                 </div>
-                                <div class="bill-total">
-                                    <h6 class="fixall total-title">
-                                        كوبون <span>ASDFG</span>
-                                    </h6>
-                                    <span class="total-num">
-                                        -20
-                                    </span>
-                                </div>
-                                <div class="final-total">
-                                    <h6 class="fixall total-title">
-                                        المجموع
-                                    </h6>
-                                    <span class="total-num">
-                                        8 ريال
-                                    </span>
-                                </div>
                             </div>
                         </div>
 
+                        <div class="cat2-desc-bill">
+                            سيتم إصدار الفاتورة عند وصول السائق لك <br>
+                            وتحديد تفاصيل القطع لطلبك
+                        </div>
                     </div>
-
                 </div>
                 <a href="done.html" class="next fixall">
                     التالى

@@ -903,6 +903,17 @@ header {
   margin-bottom: 30px;
 }
 
+.form-page .welcome {
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.form-page .welcome span {
+  font-weight: bold;
+}
+
 .input-cont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -971,6 +982,10 @@ header {
   border-color: #33d3ca;
 }
 
+.log-input.confirm-input {
+  text-align: center;
+}
+
 .form-sub {
   height: 50px;
   width: 100%;
@@ -1009,11 +1024,8 @@ header {
   display: flex;
 }
 
-.address-page .form-sub {
-  height: 50px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  border-radius: 0;
+.address-page .next {
+  position: fixed;
 }
 
 .map {
@@ -1051,7 +1063,7 @@ header {
   color: #a2a2a2;
 }
 
-.order-page {
+.cart-page {
   padding-top: 25px;
 }
 
@@ -1134,6 +1146,30 @@ header {
   border-top: 1px solid #dbdbdb;
   padding-top: 10px;
   color: #33d3ca;
+}
+
+.order-empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.empty-text {
+  font-size: 13px;
+  color: #a2a2a2;
+  margin-top: 8px;
 }
 
 .order-notes {
@@ -1267,6 +1303,23 @@ header {
   margin-top: 20px;
 }
 
+.order-desc-pay.cat2-desc-pay {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.order-desc-pay.cat2-desc-pay::after {
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .pay-method {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1289,12 +1342,36 @@ header {
   border-radius: 10px;
   padding: 15px;
   margin-top: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .order-desc-bill .table-head {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.order-desc-bill .cat2-desc-bill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 13px;
 }
 
 .bill-summ {
