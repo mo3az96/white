@@ -1597,6 +1597,55 @@ header {
   margin: 0 0 10px;
 }
 
+.req-desc-page {
+  padding: 25px 0 40px;
+}
+
+.order-head-desc {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.order-head-desc .order-head {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.order-head-desc .order-head .head-title {
+  margin-left: 10px;
+}
+
+.order-head-desc .order-head .state-state {
+  font-weight: 500;
+  color: #33d3ca;
+}
+
+.order-head-desc .order-head .num-num {
+  font-weight: 500;
+}
+
+.empty-hint {
+  margin-top: 15px;
+}
+
 .search-form {
   width: 100%;
   position: relative;
