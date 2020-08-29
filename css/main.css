@@ -2081,7 +2081,8 @@ html[dir='rtl'] .search-form .search-btn {
   cursor: pointer;
 }
 
-.contact-page {
+.contact-page,
+.send-page {
   padding-bottom: 40px;
 }
 
@@ -2169,5 +2170,35 @@ html[dir='rtl'] .search-form .search-btn {
 
 .contact-way:hover, .contact-way:focus {
   color: #33d3ca;
+}
+
+.send-page .share {
+  padding: 15px;
+}
+
+.share-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 300px;
+  margin: 50px auto 10px;
+  max-width: 100%;
+}
+
+.share-cont .share-link {
+  font-size: 30px;
+  color: #33d3ca;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.share-cont .share-link:hover, .share-cont .share-link:focus {
+  color: rgba(51, 211, 202, 0.75);
 }
 /*# sourceMappingURL=main.css.map */
