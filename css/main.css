@@ -540,6 +540,73 @@ input[type=number] {
   width: 50%;
 }
 
+.headers-cont {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
+.mo-nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mo-nav li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mo-nav a {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #a2a2a2;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.mo-nav a::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  width: 100%;
+  bottom: 0;
+  content: "";
+  background-color: #33d3ca;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.mo-nav .active a {
+  color: #33d3ca;
+}
+
+.mo-nav .active a::after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
 header {
   background-color: #33d3ca;
 }
@@ -1010,6 +1077,23 @@ header {
 
 .form-sub:hover {
   background-color: #fff;
+  color: #33d3ca;
+}
+
+.form-footer {
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  margin: 25px 0;
+}
+
+.form-footer a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #a2a2a2;
+}
+
+.form-footer a:hover, .form-footer a:focus {
   color: #33d3ca;
 }
 
@@ -1513,68 +1597,6 @@ header {
   margin: 0 0 10px;
 }
 
-.headers-cont {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  z-index: 2;
-  margin-bottom: 10px;
-}
-
-.mo-nav {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-}
-
-.mo-nav a {
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #a2a2a2;
-  font-size: 16px;
-  font-weight: 500;
-  position: relative;
-}
-
-.mo-nav a::after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 5px;
-  width: 100%;
-  bottom: 0;
-  content: "";
-  background-color: #33d3ca;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.mo-nav .active a {
-  color: #33d3ca;
-}
-
-.mo-nav .active a::after {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
 .search-form {
   width: 100%;
   position: relative;
@@ -1686,5 +1708,172 @@ html[dir='rtl'] .search-form .search-btn {
 .next p {
   font-size: 12px;
   font-weight: normal;
+}
+
+.mine-page {
+  padding-bottom: 40px;
+}
+
+.my-orders-list {
+  margin-top: 25px;
+  border: 1px solid #dbdbdb;
+  background-color: #fff;
+}
+
+.order-cont {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.order-cont:last-of-type {
+  border-bottom: none;
+}
+
+.order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.order:hover, .order:focus {
+  background-color: #f8f8f8;
+}
+
+.order .right-div,
+.order .left-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.order .left-div {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.order .order-num {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.order .num-title,
+.order .state-title {
+  margin-bottom: 3px;
+}
+
+.order .num-num {
+  font-weight: 500;
+}
+
+.order .order-state {
+  font-size: 14px;
+  color: #333;
+}
+
+.order .state-state {
+  font-weight: 500;
+  font-size: 15px;
+  color: #33d3ca;
+}
+
+.order .state-state.canceld {
+  color: #f00;
+}
+
+.order .order-total {
+  font-size: 14px;
+  color: #33d3ca;
+  font-weight: bold;
+}
+
+.order .order-desc {
+  font-size: 14px;
+  color: #33d3ca;
+}
+
+.order .dates {
+  color: #a2a2a2;
+  font-size: 14px;
+}
+
+.order .dates .date {
+  margin-bottom: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.order .dates .date:last-of-type {
+  margin-bottom: 0;
+}
+
+.order .dates .date .date-title {
+  margin: 0 3px;
+}
+
+.order-empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  color: #a2a2a2;
+  padding: 40px 0;
+}
+
+.order-empty .order-now {
+  height: 45px;
+  width: 300px;
+  border-radius: 10px;
+  border: 2px solid #33d3ca;
+  color: #33d3ca;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.order-empty .order-now:hover, .order-empty .order-now:focus {
+  color: #fff;
+  background-color: #33d3ca;
 }
 /*# sourceMappingURL=main.css.map */
