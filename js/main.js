@@ -54,6 +54,35 @@ $(document).ready(function () {
 
     ////////////meun
 
+    $('.coupon-btn').click(function () {
+        $(".coupon-modal-cont").fadeIn(300)
+        $(".coupon-modal").addClass("open")
+    });
+    $('.coupon-modal-cont').click(function () {
+        $(".coupon-modal-cont").fadeOut(300)
+        $(".coupon-modal").removeClass("open")
+    });
+    $('.coupon-modal').click(function (e) {
+        e.stopPropagation();
+    });
+
+    $('.card-btn').click(function () {
+        $(".card-modal-cont").fadeIn(300)
+        $(".card-modal").addClass("open")
+    });
+    $('.card-modal-cont').click(function () {
+        $(".card-modal-cont").fadeOut(300)
+        $(".card-modal").removeClass("open")
+    });
+    $('.card-modal').click(function (e) {
+        e.stopPropagation();
+    });
+
+
+    $('.close-modal').click(function () {
+        $(this).parent().parent().parent().parent().fadeOut(300)
+        $(this).parent().removeClass("open")
+    });
     $('.toggle-nav').click(function () {
         toggleNav();
     });
